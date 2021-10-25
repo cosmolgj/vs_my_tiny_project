@@ -3,11 +3,7 @@ from bs4 import BeautifulSoup
 
 html = urlopen("https://www.weather.go.kr/weather/forecast/timeseries.jsp")
 
-
 soup = BeautifulSoup(html, "lxml")
-
-print(soup)
-
 
 table = soup.find("table", class_="forecastNew3")
 
